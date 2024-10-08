@@ -1,0 +1,30 @@
+<div class="shopping-list">
+    <h1>Lista de Compras</h1>
+    <input [(ngModel)]="newItem" placeholder="Adicionar item" />
+    <button (click)="addItem()">Adicionar</button>
+    
+    <h2>Itens Não Comprados</h2>
+    <ul>
+      <li *ngFor="let item of unpurchasedItems">
+        <span [class.purchased]="item.purchased">{{ item.name }}</span>
+        <div class="list-icons">
+          <mat-icon (click)="markAsPurchased(item)" fontIcon="check"></mat-icon>
+          <mat-icon (click)="editItem(item)" fontIcon="edit"></mat-icon>
+          <mat-icon (click)="removeItem(item)" fontIcon="delete"></mat-icon>
+        </div>
+      </li>
+    </ul>
+  
+    <h2>Itens Comprados</h2>
+    <ul>
+      <li *ngFor="let item of purchasedItems">
+        <span [class.purchased]="item.purchased">{{ item.name }}</span>
+        <div class="list-icons">
+          <mat-icon (click)="markAsPurchased(item)" fontIcon="close"></mat-icon>
+          <mat-icon (click)="editItem(item)" fontIcon="edit"></mat-icon>
+          <mat-icon (click)="removeItem(item)" fontIcon="delete"></mat-icon>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
