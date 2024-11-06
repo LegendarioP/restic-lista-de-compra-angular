@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@exemplo.com"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "email": "bob@exemplo.com"
+    }
+  ],
+  "shopping-list": [
+    {
+      "id": "2abacce2-e557-4491-a42e-7787e35d961d",
+      "title": "Planejar reunião semanal",
+      "userId": 2,
+      "purchased": false
+    },
+    {
+      "id": "a479ad0b-0b4a-4dec-8bd2-f203827a622c",
+      "title": "Revisar proposta de orçamento",
+      "userId": 1,
+      "purchased": false
+    }
+  ]
+}

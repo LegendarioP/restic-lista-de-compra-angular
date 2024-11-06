@@ -1,5 +1,12 @@
-<main class="main"> 
-  <app-shop-list></app-shop-list> 
-</main>
-
-<router-outlet />
+<div *ngIf="isLoggedIn; else notLoggedIn">
+  <app-shop-list></app-shop-list>
+  <div class="login-area">
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>
+<ng-template #notLoggedIn >
+  <div class="login-area">
+    <p>É necessário realizar o login para acessar a lista de compras.</p>
+    <button (click)="login()">Login</button>
+  </div>
+</ng-template>
